@@ -1,0 +1,36 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+<div class="container mt-5">
+    <h2 class="text-center mb-4">📤 Upload New Dataset</h2>
+
+    {% with messages = get_flashed_messages(with_categories=true) %}
+      {% if messages %}
+        {% for category, message in messages %}
+          <div class="alert alert-{{ category }} alert-dismissible fade show" role="alert">
+            {{ message }}
+            <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+          </div>
+        {% endfor %}
+      {% endif %}
+    {% endwith %}
+
+    <form method="POST" enctype="multipart/form-data">
+        <div class="mb-3">
+            <label for="dataset_type">Select Dataset:</label>
+            <select id="dataset_type" name="dataset_type" class="form-select" required>
+                <option value="households">Households</option>
+                <option value="products">Products</option>
+                <option value="transactions">Transactions</option>
+            </select>
+        </div>
+
+        <div class="mb-3">
+            <label for="file">Choose CSV or JSON file:</label>
+            <input type="file" id="file" class="form-control" name="file" required>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Upload</button>
+    </form>
+</div>
+{% endblock %}

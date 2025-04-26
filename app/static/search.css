@@ -1,0 +1,65 @@
+body {
+    background: linear-gradient(to right, #15172b, #000000);
+    font-family: 'Outfit', sans-serif;
+    color: white;
+    padding: 30px;
+  }
+
+  .form-section {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 20px;
+    border-radius: 12px;
+    margin-bottom: 30px;
+  }
+
+  .table-section {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 20px;
+    border-radius: 12px;
+  }
+
+  input[type="text"] {
+    background: rgba(255, 255, 255, 0.1);
+    border: none;
+    border-radius: 8px;
+    padding: 10px 12px;
+    width: 100%;
+    color: white;
+    margin-bottom: 10px;
+  }
+
+  input::placeholder {
+    color: #ccc;
+  }
+
+  .btn-search {
+    background: linear-gradient(to right, #00c6ff, #0072ff);
+    border: none;
+    padding: 10px 15px;
+    border-radius: 8px;
+    color: white;
+    font-weight: bold;
+    transition: 0.3s ease;
+  }
+
+  .btn-search:hover {
+    box-shadow: 0 0 10px #00c6ff;
+  }
+
+  select {
+    width: 100%;
+    padding: 8px;
+    border-radius: 8px;
+    background: rgba(255,255,255,0.1);
+    border: none;
+    color: black;
+    margin-bottom: 10px;
+  }
+
+  table.dataTable {
+    color: white;
+  }
+
+  .dataTables_wrapper .dataTables_paginate .paginate_button {
+    color: white !important;
+  }

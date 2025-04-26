@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Login | Retail Dashboard</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="{{ url_for('static', filename='favicon.png') }}">
+  <style>
+    body, html {
+      height: 100%;
+      margin: 0;
+      font-family: 'Outfit', sans-serif;
+      background: linear-gradient(135deg, #15172b, #000000);
+    }
+
+    .container-fluid {
+      height: 100vh;
+      display: flex;
+      flex-direction: row;
+    }
+
+    .left-panel {
+      flex: 1;
+      background: url('https://images.unsplash.com/photo-1556745753-b2904692b3cd') center center/cover no-repeat;
+      position: relative;
+      display: flex;
+      align-items: flex-start;
+      justify-content: flex-start;
+    }
+
+    .left-panel::after {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(0, 0, 0, 0.4);
+    }
+
+    .brand-logo {
+      position: absolute;
+      top: 20px;
+      left: 30px;
+      z-index: 2;
+      font-size: 24px;
+      color: white;
+      font-weight: 600;
+      background-color: rgba(0,0,0,0.5);
+      padding: 8px 15px;
+      border-radius: 12px;
+    }
+
+    .right-panel {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 30px;
+      background: linear-gradient(160deg, rgba(255,255,255,0.05), rgba(255,255,255,0));
+      backdrop-filter: blur(12px);
+    }
+
+    .login-card {
+      background: rgba(255, 255, 255, 0.08);
+      border-radius: 20px;
+      padding: 40px 30px;
+      max-width: 400px;
+      width: 100%;
+      color: white;
+      box-shadow: 0 10px 35px rgba(0, 0, 0, 0.5);
+      animation: fadeInUp 1s ease-out;
+    }
+
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(40px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    .login-card h2 {
+      margin-bottom: 20px;
+      font-weight: 600;
+      color: #00e0ff;
+      text-shadow: 0 0 6px #00e0ff;
+    }
+
+    .login-card input[type="text"],
+    .login-card input[type="password"],
+    .login-card input[type="email"] {
+      background: rgba(255, 255, 255, 0.1);
+      border: none;
+      border-radius: 8px;
+      padding: 12px 15px;
+      margin-bottom: 20px;
+      width: 100%;
+      color: white;
+    }
+
+    .login-card input::placeholder {
+      color: #ccc;
+    }
+
+    .btn-login {
+      background: linear-gradient(45deg, #00c6ff, #0072ff);
+      border: none;
+      border-radius: 8px;
+      padding: 12px;
+      color: white;
+      font-weight: bold;
+      width: 100%;
+      transition: 0.4s ease;
+    }
+
+    .btn-login:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 12px #00c6ff;
+    }
+
+    .tagline {
+      font-size: 14px;
+      color: #bbb;
+      margin-top: -10px;
+      margin-bottom: 30px;
+    }
+
+    .icon {
+      font-size: 48px;
+      margin-bottom: 15px;
+      color: #00e0ff;
+    }
+
+    @media (max-width: 768px) {
+      .container-fluid {
+        flex-direction: column;
+      }
+
+      .left-panel {
+        height: 35vh;
+        flex: none;
+      }
+
+      .right-panel {
+        flex: 1;
+        padding-top: 20px;
+      }
+
+      .brand-logo {
+        top: 10px;
+        left: 15px;
+        font-size: 18px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container-fluid">
+    <div class="left-panel">
+      <div class="brand-logo">🛒 RetailIQ</div>
+    </div>
+
+    <div class="right-panel">
+      <div class="login-card">
+        <div class="text-center">
+          <div class="icon">📈</div>
+          <h2>Welcome Back</h2>
+          <p class="tagline">Login to explore retail intelligence</p>
+        </div>
+        <form method="post">
+          <input type="text" name="username" placeholder="Username" required>
+          <input type="password" name="password" placeholder="Password" required>
+          <input type="email" name = "email" placeholder="Email" required>
+          <button class="btn-login" type="submit">Login</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

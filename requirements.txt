@@ -1,0 +1,9 @@
+Flask
+Flask-PyMongo
+pandas
+plotly
+tqdm
+gunicorn
+python-dotenv
+mlxtend
+seaborn

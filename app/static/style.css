@@ -1,0 +1,151 @@
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Outfit', sans-serif;
+    background: linear-gradient(to right, #15172b, #000000);
+    color: white;
+    min-height: 100vh;
+  }
+  
+  
+  .navbar-custom {
+    background: #1a1a1a;
+    padding: 10px 20px;
+    border-bottom: 1px solid #333;
+  }
+  
+  .navbar-custom a {
+    color: #00d1b2;
+    margin-right: 15px;
+    font-weight: 600;
+    text-decoration: none;
+  }
+  
+  .navbar-custom a:hover {
+    color: #ffffff;
+  }
+  
+
+  .main-content {
+    padding: 30px;
+  }
+  
+
+  h2, h3, h4 {
+    color: #00d1b2;
+  }
+  
+
+  .loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #000;
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .loader:after {
+    content: '';
+    width: 50px;
+    height: 50px;
+    border: 6px solid #00c6ff;
+    border-top: 6px solid transparent;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  
+  @keyframes fadeIn {
+    0% { opacity: 0; transform: translateY(20px); }
+    100% { opacity: 1; transform: translateY(0); }
+  }
+  
+
+  .chart-section {
+    margin-bottom: 50px;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.4);
+    animation: fadeIn 1.2s ease-in-out;
+  }
+  
+
+  .btn-custom, .btn-outline-info {
+    margin-top: 30px;
+    font-weight: bold;
+    background: rgba(255, 255, 255, 0.1);
+    border: none;
+    color: #00d1b2;
+    transition: all 0.3s ease;
+  }
+  
+  .btn-custom:hover, .btn-outline-info:hover {
+    background: #00d1b2;
+    color: black;
+    transform: scale(1.05);
+  }
+  
+
+  .table-dark {
+    background-color: #1a1a1a;
+    color: white;
+    border-radius: 12px;
+    overflow: hidden;
+  }
+  
+  .table-dark th, .table-dark td {
+    vertical-align: middle;
+    text-align: center;
+  }
+  
+  .table-striped tbody tr:nth-of-type(odd) {
+    background-color: rgba(255,255,255,0.05);
+  }
+  
+
+  .login-card {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: 0 8px 32px rgba(31, 38, 135, 0.37);
+    width: 350px;
+    margin: 100px auto 0 auto;
+    animation: fadeIn 1.2s ease-in-out;
+  }
+  
+
+  .search-form {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .search-form input, .search-form select {
+    background: #1a1a1a;
+    color: #00d1b2;
+    border: 1px solid #00d1b2;
+  }
+  
+  .search-form button {
+    background: #00d1b2;
+    color: black;
+    border: none;
+    font-weight: bold;
+  }
+  
+  .search-form button:hover {
+    background: #009e88;
+    color: white;
+  }
+  
