@@ -126,7 +126,7 @@ Retail_Analysis/
 ├── app/
 │   ├── __init__.py           # Flask app factory
 │   ├── routes.py             # Main routes (login, dashboard, search, upload)
-│   ├── chunk.py              # Customer churn analysis routes
+│   ├── chunk.py              # Customer churn analysis blueprint routes
 │   ├── basket_analysis.py    # Market basket analysis routes
 │   ├── data_preparation.py   # Data loading and preprocessing
 │   ├── static/               # CSS, images, and static assets
